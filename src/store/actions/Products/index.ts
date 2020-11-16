@@ -9,6 +9,8 @@ import axios from 'axios';
 import Product from 'models/modules/Product.interface';
 import { Dispatch } from 'redux';
 import State from 'models/State.interface';
+import {API_URL} from "@env";
+
 
 export const setProductsRedux = (payload : Product[]) => ({
   type: SET_PRODUCTS,
@@ -33,7 +35,7 @@ export const setError = (payload: any) => ({
 export const getProducts = () => async (dispatch:Dispatch, getState: () =>State) => {
   try {
     const response = await axios.get(
-      'http://192.168.0.101:3000/api/v1/product/getProducts',
+      `${API_URL}/product/getProducts`,
     );
 
    // console.log(response.data.data[0]);

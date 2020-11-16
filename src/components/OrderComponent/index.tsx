@@ -19,14 +19,16 @@ const OrderComponent = ({order}:Props):ReactElement<Props> => {
      {/* <View style={styles.list}> */}
        {/* <Image source={{uri: product.image}} style = {styles.image}/> */}
        
-       {/* <View style={{flexDirection:'row', height: 50, justifyContent: "space-between", marginLeft:10, marginRight:10 }}>*/}
+        <View style={{flexDirection:'row', alignItems:"center", height: 40, justifyContent: "space-between", marginLeft:10, marginRight:10 }}>
       
         <Text style={styles.textFields}>{`Pedido de ${order?.client.name} ${order?.client.lastname}`}</Text>
+        <Text style={styles.date}>{order?.date}</Text>
+
+       </View>
         <Text style={styles.phone}>{`+506 ${order?.client.telefono}`}</Text>
 
         <View style={{flexDirection:'row', height: 50, justifyContent: "space-between", marginRight:10 }}>
         <Text style={styles.orderState}>{"No entregado"}</Text>
-        <Text style={styles.date}>{order?.date}</Text>
 
         </View>    
       {/*  <View>
@@ -71,9 +73,7 @@ const styles = StyleSheet.create({
   textFields: {
     color: 'black',
     textAlign: 'left',
-    marginLeft: 5,
-    marginBottom: 10,
-    width: '100%',
+    width: '60%',
     fontSize: 17,
     fontWeight:"bold"
   },  phone: {
@@ -86,19 +86,18 @@ const styles = StyleSheet.create({
   },
   orderState: {
     color: 'white',
-    textAlign: 'left',
+    textAlign: 'center',
     marginLeft: 5,
     marginBottom: 5,
-    width: '50%',
+    fontWeight:"bold",
+    width: '100%',
     fontSize: 17,
     backgroundColor:'green',
     padding:10
   }, date: {
     color: 'black',
     textAlign: "right",
-    marginTop: 10,
-    marginRight:10,
-    width: '50%',
+    width: '30%',
     fontSize: 17,
   },
   image: {

@@ -3,6 +3,8 @@ import {
     SET_USER_LOGGED,
     SET_ERROR,
   } from '../actionType';
+
+  import {API_URL} from "@env";
   
   import axios from 'axios';
   import { Dispatch } from 'redux';
@@ -29,7 +31,7 @@ import User from 'models/modules/User.interface';
     try {
 
       const response = await axios.post(
-        'http://192.168.0.101:3000/api/v1/user/login',{
+        `${API_URL}/user/login`,{
             email:username,
             password:password
         }

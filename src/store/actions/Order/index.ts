@@ -4,6 +4,9 @@ import {
     SET_CURRENT_ORDER,
     SET_ERROR
   } from '../actionType';
+
+  import {API_URL} from "@env";
+
   
   import axios from 'axios';
   import Order from 'models/modules/Order.interface';
@@ -33,7 +36,7 @@ import {
   export const getOrders = () => async (dispatch:Dispatch, getState: () =>State) => {
     try {
       const response = await axios.get(
-        'http://192.168.0.101:3000/api/v1/bill/getBills',
+        `${API_URL}/bill/getBills`,
       );
   
       //console.log(response.data.data);
