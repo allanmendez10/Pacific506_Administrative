@@ -53,12 +53,6 @@ const MainContainer = (): ReactElement => {
           style={styles.activityIndicator}
         />
       )}
-     {/* <TouchableOpacity onPress = {goToBill} style={styles.footer}>
-        <Text
-          style={
-            styles.footerText
-          }>{`Agregar al carrito. ₡ ${amount}`}</Text>
-        </TouchableOpacity>  */}
     </SafeAreaView>
   );
 };

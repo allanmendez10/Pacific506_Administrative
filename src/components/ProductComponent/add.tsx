@@ -6,6 +6,7 @@ import axios from 'axios'
 import {showAlert} from '../../utils/alerts'
 import {useNavigation} from '@react-navigation/native';
 import {getProducts} from '../../store/actions/Products';
+import {API_URL} from "@env";
 
 
 export default function SignInComponent() {
@@ -29,7 +30,7 @@ export default function SignInComponent() {
 
         setRequestState(true);
         const response = await axios.post(
-            'http://192.168.0.101:3000/api/v1/product/register',{
+            `${API_URL}/product/register`,{
                 product:product
             }
           );
