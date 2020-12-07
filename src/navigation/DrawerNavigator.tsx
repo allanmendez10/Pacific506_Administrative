@@ -1,9 +1,7 @@
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import StackNavigator from './StackNavigator';
-import index from 'components/ClientComponent';
 const Drawer = createDrawerNavigator();
-import MainContainer from '../components/MainContainer'
 import Profile from '../components/Profile'
 
 const MainNavigator = () => {
